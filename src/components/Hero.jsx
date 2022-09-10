@@ -5,12 +5,12 @@ import GetStarted from "./GetStarted";
 const Hero = () => (
   <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
     <div
-      className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}
+      className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-14 px-4`}
     >
       {/* Discount Part */}
 
-      <div className="flex flex-row items-center py-[4px] px-3 bg-discount-gradient rounded-[8px] mb-1">
-        <img src={discount} alt="discount" className=" w-[28px] h-[28px]" />
+      <div className="flex flex-row items-center py-[3px] px-2 bg-discount-gradient rounded-[8px] mb-1">
+        <img src={discount} alt="discount" className=" w-[25px] h-[25px]" />
         <p className={`ml-1 ${styles.paragraph}`}>
           <span className="text-white">20%</span> Discount For{" "}
           <span className="text-white">1 Month</span> Account
@@ -19,17 +19,41 @@ const Hero = () => (
 
       <div className="flex flex-row justify-between items-center w-full">
         {/* Text Part */}
-        <h1 className="flex-1 font-poppins text-white ss:text-[62px] text-[42px] ss:leading-[90px] leading-[65px]">
+        <h1 className="flex-1 font-poppins font-semibold text-white ss:text-[60px] text-[45px] ss:leading-[88px] leading-[63px]">
           The Next <br className="sm:block hidden" />{" "}
           <span className="text-gradient">Generation </span>
-          <br className="sm:block hidden" /> Payment Method
         </h1>
 
         {/* Get-Started */}
-        <div className="ss:flex md:mr-3 mr-0">
+        <div className="ss:flex hidden md:mr-2 mr-0">
           <GetStarted />
         </div>
       </div>
+
+      <h1 className="font-poppins font-semibold ss:text-[60px] text-[45px] ss:leading-[88px] leading-[63px] text-white">
+        Payment Method.
+      </h1>
+      <p className={`${styles.paragraph} max-w-[450px] mt-2`}>
+        Our team of experts uses a methodology to identify the credit cards most
+        likely to fit your needs. We examine annual percentage rates, annual
+        fees.
+      </p>
+    </div>
+
+    {/* Right Side */}
+    <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-6 relative`}>
+      <img
+        src={robot}
+        alt="billing"
+        className="w-[100%] h-[100%] relative z-[5]"
+      />
+      <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
+      <div className="absolute z-[1] w-[80%] h-[80%] rounded-full bottom-40 white__gradient" />
+      <div className="absolute z-[0] w-[50%] h-[50%] right-20 bottom-20 blue__gradient" />
+    </div>
+
+    <div className={`ss:hidden ${styles.flexCenter}`}>
+      <GetStarted />
     </div>
   </section>
 );
