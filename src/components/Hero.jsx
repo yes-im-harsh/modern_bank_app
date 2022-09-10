@@ -1,6 +1,6 @@
-import React from "react";
 import { discount, robot } from "../assets";
 import styles from "../style";
+import GetStarted from "./GetStarted";
 
 const Hero = () => (
   <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
@@ -24,6 +24,11 @@ const Hero = () => (
           <span className="text-gradient">Generation </span>
           <br className="sm:block hidden" /> Payment Method
         </h1>
+
+        {/* Get-Started */}
+        <div className="ss:flex md:mr-3 mr-0">
+          <GetStarted />
+        </div>
       </div>
     </div>
   </section>
